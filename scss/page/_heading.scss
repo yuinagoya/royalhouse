@@ -67,6 +67,15 @@
         vertical-align: middle;
       }
   }
+  h4 {
+    @include fontsize(16);
+    font-weight: bold;
+    color:#000;
+    background-color: #F2F2F2;
+    border-radius: 22px;
+    display: inline-block;
+    padding: .7em 25px;
+  }
 
 
 }

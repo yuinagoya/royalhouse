@@ -11,7 +11,7 @@
 
 @import "setting/mixin";
 
-
+@import "layout/col";
 @import "layout/common";
 
 
@@ -42,6 +42,7 @@
 //追加した下層
 //@import "page/slug";
 @import "page/park";
+@import "page/recomend";
 
 
 @import "page/custom";
