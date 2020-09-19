@@ -1,0 +1,41 @@
+@charset "UTF-8";
+//ページ数の少ない用
+
+
+.hide-md{
+  @include media(md) {
+    display: none;
+  }
+}
+.hide-sm-only{
+  @include media(sm) {
+    display: none;
+  }
+}
+//breakpointの書き方mixin
+//--------------------------------------------
+//769px以上の場合　PCサイズ MD
+//@media only screen and (min-width: 769px) {
+//    . }
+//--------------------------------------------
+@include media(md) {
+    //    ここにscssを書く
+}
+
+//--------------------------------------------
+//768px以下の場合　タブレットサイズ SM
+//@media only screen and (max-width: 768px) {
+//     }
+//--------------------------------------------
+@include media(sm) {
+    //    ここにscssを書く
+}
+
+//--------------------------------------------
+//420px以下の場合　スマホサイズ XS
+//@media only screen and (max-width: 420px) {
+//   }
+//--------------------------------------------
+@include media(xs) {
+    //    ここにscssを書く
+}

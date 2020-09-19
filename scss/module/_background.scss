@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* background
+=========================================== */
+
+.bg-gray {
+    background: rgba($lightgray, .7);
+}
+
+.bg-white {
+  background: rgba(#fff, .7);
+  color: $color_text;
+}
+
+.bg-accent {
+  background: rgba($color_accent, .1) ;
+
+}
+
+.bg-primary {
+    background: rgba($color_primary,.1);
+}
+
+.bg-secondary {
+  background: rgba($color_secondary, .1) ;
+}

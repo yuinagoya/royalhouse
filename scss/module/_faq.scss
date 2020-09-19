@@ -1,0 +1,65 @@
+@charset "UTF-8";
+//======================================================
+//faq
+//======================================================//
+.faqBlock__list.js-toggle{
+    dd{
+        display: none;
+    }
+}
+/* pattan01
+=========================================== */
+.faqBlock__list {
+    .faqBlock__item {
+        display: block;
+        overflow: hidden;
+        padding: 1em;
+        margin: 1em 0 1em;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #ddd;
+
+        dt {
+
+
+
+            color: $color_primary;
+            font-weight: bold;
+            @include fontsize(18);
+
+            &:before {
+                content: "Q";
+                color: white;
+                background: $color_primary;
+                margin-right: 1em;
+                padding: 2px 7px;
+            }
+        }
+
+        dd {
+            margin-top: 1em;
+
+            padding-left: 3em;
+            position: relative;
+
+            //display: none;
+            div:first-child {
+                padding-top: 0;
+            }
+
+            &:before {
+                content: "A";
+                padding: 0 7px;
+                font-weight: bold;
+                @include fontsize(18);
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: white;
+                background: $color_secondary;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+// ======== key color
+$color_primary: #1D945C; // 基本カラー green
+$color_secondary: #C3A36D; // サブカラー brown
+$color_accent: #e73535; // アクセントカラーred
+
+//カスタムカラー
+$color_lightgreen: #E7F2D0;
+$color_yellow: #FFF8CC;
+$color_lightbrown: #F3EEE4;
+$color_darkbrown: #393122;
+$color_yellowgreen: #E4F299;
+$color_lightblue: #61B5DB;
+
+
+// 固定文字色
+$color_white: #fff;
+$color_black: #222222;
+$color_red: #f85e3f;
+$color_blue: blue;
+
+$gray:#a0a0a0;//普通のグレー
+$lightgray:#efefef;//薄いグレー
+$darkgray:#999;//濃いグレー
+$yellow:yellow;
+$green:green;
+
+// ======== background color
+$color_body_bg: #fff; // body背景
+$color_pointBox_bg: rgba($color_primary, .05); // 帯の背景
+
+// ======== background color
+$color_body_bg: #fff; // body背景(nền body)
+$color_pointBox_bg: rgba($color_primary, .05); // 帯の背景
+$color_inquiry_bg: $color_pointBox_bg; // お問い合わせフォーム背景
+
+// ======== text color
+$color_text: #2d3038; // 基本文字色
+$color_link: $color_primary; // リンクカラー
+$color_link_hover: $color_secondary; // リンクカラー（マウスホバー）
+
+$color_h1_text:darken($color_primary,30); // 下層h1テキスト色
+$color_h2_text: $color_primary; // h2テキスト色
+$color_h3_text: $color_primary; // h3テキスト色
+$color_h4_text: $color_primary; // h4テキスト色
+$color_h5_text: $color_text; // h5テキスト色

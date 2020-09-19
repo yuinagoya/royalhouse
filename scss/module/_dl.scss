@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/* dl dt dd
+=========================================== */
+
+
+
+/*横並びリスト*/
+
+ dl.dllist {
+	width: 100%;
+     
+     &:after {
+         display: block;
+         clear: both;
+     }
+     dt {
+         width: 200px;
+         float: left;
+         border-top: 1px dotted #ccc;
+         padding-bottom: 10px;
+         font-weight: bold;
+     }
+     dd {
+         width: 500px;
+         border-top: 1px dotted #ccc;
+         float: left;
+     }
+
+}
+
+
+
+
+
+
+
+

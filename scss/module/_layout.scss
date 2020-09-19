@@ -1,0 +1,110 @@
+@charset "UTF-8";
+//======================================================
+//layout
+//======================================================//
+$l-box01-pc-height:600px; //pcの高さ
+$l-box01-sp-height:400px; //spの高さ
+
+.l-box01 {
+    height: $l-box01-pc-height;
+    display: flex;
+    align-items: center;
+
+    &.reverse {
+        flex-flow: row-reverse;
+    }
+
+    @include media(sm) {
+        display: block;
+        height: inherit;
+    }
+
+    .l-box__bg {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50%;
+        height: 100%;
+
+        @include media(sm) {
+            width: 100%;
+            height: $l-box01-sp-height;
+        }
+    }
+
+    .l-box__text {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        background: yellow;
+
+        @include media(sm) {
+            display: block;
+            width: 100%;
+        }
+
+        &__inner {
+            padding: 2em;
+
+            @include media(sm) {
+                padding: 2em 1em;
+            }
+        }
+    }
+}
+
+.l-box02 {
+
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 10vw);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media(sm) {
+        display: block;
+        max-width: 100%;
+
+    }
+
+    + .l-box02 {
+        margin-top: 4em;
+    }
+
+    &.reverse {
+        flex-flow: row-reverse;
+
+        .l-box02__textArea {}
+    }
+
+    .l-box02__image {
+        width: 50%;
+
+        @include media(sm) {
+            width: 100%;
+
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .l-box02__textArea {
+        width: 50%;
+        padding: 2em;
+        position: relative;
+        top: 2em;
+        background: rgba(red, .8);
+
+        @include media(sm) {
+            width: 100%;
+
+        }
+    }
+
+
+
+
+}

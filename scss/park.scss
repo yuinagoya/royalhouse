@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+///*グリッドシステムは下記を採用
+///*http://sassflexboxgrid.com/
+///*-----------------------------------*/
+
+
+
+@import "color"; //色
+@import "main"; //もろもろ
+
+@import "setting/mixin";
+
+
+@import "layout/common";
+
+
+//モジュール
+@import "module/btn";
+/*@import "module/dl";
+@import "module/font";
+@import "module/list";
+@import "module/table";
+@import "module/space";
+@import "module/background";
+@import "module/box";
+@import "module/faq";
+@import "module/flow";
+@import "module/privacy";
+@import "module/sitemap";
+@import "module/breadcrumb";
+@import "module/layout";*/
+
+
+
+
+//下層ページ
+@import "page/heading";//読み込むスタイルをかえて　a or b or c
+/*@import "page/form";*/
+
+
+//追加した下層
+//@import "page/slug";
+@import "page/park";
+
+
+@import "page/custom";

@@ -1,0 +1,45 @@
+	@charset "UTF-8";
+	// ====================================================================
+	// @extend .padding;
+	// --------------------------------------------------------------------
+	// 概要: セクション用のマージン
+	// ====================================================================
+	$space:1em;
+	.section {
+		padding-top: $space*4;
+		padding-bottom: $space*4;
+        @media #{$breakpoint-xs-only} {
+			padding-top: $space*2;
+			padding-bottom: $space*2;
+		}
+	}
+	
+	.padding {
+		padding: $space*2;
+        @media #{$breakpoint-xs-only} {
+			padding: $space*1;
+		}
+	}
+
+.padding {
+    padding-top: $space * 2;
+    padding-bottom: $space * 2;
+    &-small {
+        padding-top: $space / 2;
+        padding-bottom: $space;
+    }
+    &-large {
+        padding-top: $space * 2;
+        padding-bottom: $space * 4;
+    }
+}
+
+.mb {
+    padding-bottom: $space*2;
+    &-small {
+        padding-bottom: $space;
+    }
+    &-large {
+        padding-bottom: $space * 2;
+    }
+}

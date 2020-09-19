@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+//======================================================
+//archive共通
+//======================================================//
+.postBlock {
+
+    .cate {
+
+        background: #000;
+        color: #fff;
+        padding: 2px 1em;
+        @extend .text-small;
+        line-height: 1;
+        min-width: 160px;
+
+        a[href*="/info"] {
+            background-color: $color_secondary;
+        }
+
+        a[href*="/blog"] {
+            background-color: $color_secondary;
+        }
+    }
+
+    .day {
+        margin-right: 1em;
+        @extend .text-small;
+
+        time {
+            display: inline;
+        }
+    }
+    p{
+        margin-bottom: 0;
+    }
+}
+
+
+//======================================================
+//テキスト一覧
+//======================================================//
+
+.postBlock--list {
+
+
+    .postBlock--list__list {
+        margin-bottom: 40px;
+    }
+
+    .postBlock--list__item {
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+
+        a {
+            display: block;
+            padding: 1em 0;
+            color: $color_text;
+            text-decoration: none;
+
+            &:hover {
+                color: lighten($color_text, 40);
+            }
+        }
+
+        &:nth-child(odd) {
+            //  background: #fdfdfd;
+        }
+
+        &:nth-child(even) {}
+    }
+
+    .postBlock--list__wrap {
+        display: flex;
+        @include media(xs){
+            display: block;
+        }
+
+    }
+
+    .postBlock--list__head {
+        min-width: 200px;
+        @include media(xs){
+            min-width: 100%;
+        }
+    }
+
+    .postBlock--list__content {
+        overflow: hidden;
+        width: calc(100% - 210px);
+        @include media(xs){
+            width: 100%;
+        }
+        
+        figure{
+            width: 100px;
+            float: left;
+            margin-right: 10px;
+        }
+        
+    }
+
+    .postBlock--list__title {
+        @extend .text-large;
+        @extend .text-bold;
+        margin-bottom: 0;
+    }
+}
+
+//======================================================
+//サムネイル付き一覧
+//======================================================//
+
+
+.postBlock--thumb {
+
+    figure {
+
+        margin-bottom: .4em;
+    }
+
+    .postBlock--thumb__link {
+        color: $color_text;
+        text-decoration: none;
+        display: block;
+        overflow: hidden;
+
+        &:hover {
+            opacity: .7;
+        }
+
+    }
+
+    .postBlock--thumb__title {
+        font-weight: bold;
+        @include fontsize(18);
+    }
+
+    .postBlock--thumb__text {
+        color: $darkgray;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+
+
+}
+
+//======================================================
+//カテゴリーリスト
+//======================================================//
+
+.postBlock__category {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: -1em;
+    margin-left: -1em;
+    padding: 1rem;
+
+    @include media(sm) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    > li {
+        margin: 0 .5em;
+        min-width: calc((100% / 3) - 1em); //ボタンの数を変えると幅が変わる
+        text-align: center;
+        box-sizing: border-box;
+        display: flex;
+        padding-bottom: 1em;
+
+        @include media(sm) {
+            min-width: calc((100% / 2) - 1em);
+            padding-bottom: 1em;
+        }
+
+        @include media(xs) {
+            min-width: calc((100% / 2) - 1em);
+        }
+
+        a {
+            border: 1px solid $color_primary;
+            padding: 10px 0;
+            display: block;
+            text-decoration: none;
+            width: 100%;
+
+            @include media(sm) {
+                @include fontsize(14);
+            }
+
+            &:hover {
+                background: repeating-linear-gradient(-45deg, $color_primary, $color_primary 5px, rgba($color_primary, .95) 5px, rgba($color_primary, .95) 10px);
+                color: #fff;
+            }
+        }
+    }
+}

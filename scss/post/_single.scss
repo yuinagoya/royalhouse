@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+
+//
+.postBlock--recent {
+    padding-top: 2em;
+
+    &__title {
+        font-weight: bold;
+        @extend .text-large;
+    }
+}
+
+
+
+
+
+//======================================================
+//投稿
+//======================================================//
+.singleBlock {
+
+    strong {
+        font-weight: bold;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    blockquote {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 40px;
+        -webkit-margin-end: 40px;
+    }
+
+    .aligncenter {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .alignright {
+        float: right;
+    }
+
+    .alignleft {
+        float: left;
+    }
+
+    img[class*="wp-image-"],
+    img[class*="attachment-"] {
+        max-width: 100%;
+        height: auto;
+
+        @include media(md) {
+            margin-right: 1em;
+            margin-left: 1em;
+        }
+
+        @include media(xs) {
+            margin-bottom: 1em;
+            width: 100%;
+        }
+    }
+
+    .clearfix {
+        overflow: hidden;
+        zoom: 1;
+    }
+
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    &__content {
+        &:before {
+            content: " ";
+            display: table;
+        }
+
+        &:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .wp-caption {
+            margin-bottom: 1em;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        h2 {
+            font-size: 125%;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+
+        h3 {
+            font-size: 19px;
+        }
+
+        h4 {
+            font-size: 16px;
+        }
+
+        h5 {
+            font-size: 13px;
+        }
+
+        h6 {
+            font-size: 10px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: bold;
+        }
+
+        em {
+            font-family: 'Times New Roman', 'ヒラギノ明朝 Pro W6', 'Hiragino Mincho Pro', 'ＭＳ Ｐゴシック', serif;
+            font-style: italic;
+        }
+
+
+        .blockquote{
+            
+        }
+
+
+        p {
+            margin-bottom: .5em;
+        }
+
+       
+
+        ul {
+            padding-left: 40px;
+            margin-bottom: 1em;
+
+            li {
+                list-style: circle;
+            }
+        }
+    }
+
+ 
+    blockquote{
+        background: #f2f2f2;
+        padding: 1em;
+        margin: 1em 0;
+        border-radius: 10px;
+    }
+
+    .clearfix {
+        overflow: hidden;
+    }
+
+    iframe.wp-embedded-content {
+        width: 100%;
+    }
+}
+
+.pagelink {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3em;
+
+    li {
+        padding: 1em;
+
+        a {
+            @extend .button;
+            @extend .button--default;
+            width: 100%;
+            padding: 0 20px;
+            height: 50px;
+            @include fontsize(16);
+            @include media(xs){
+                padding: 10px;
+            }
+
+            &:after {
+                content: none;
+            }
+        }
+    }
+}

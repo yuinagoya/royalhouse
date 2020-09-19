@@ -1,0 +1,192 @@
+@charset "UTF-8";
+// _mixin.scss
+// --------------------------------------------------------------------
+
+
+
+// ====================================================================
+// 関数名: fontsize
+// 使用例: @include fontsize(15);　※15pxの場合
+// --------------------------------------------------------------------
+//@mixin fontsize($size, $base: 10) {
+//    font-size: $size + px;
+//    font-size: ($size / $base) * 1rem;
+//}
+@mixin fontsize($size) {
+    font-size: $size + px;
+    font-size: ($size / 10) * 1rem;
+//    @include media(sm) {
+//        font-size: ($size / 10) * .85rem;
+//    }
+}
+
+// フォントサイズとラインハイトまとめて指定
+// ----------------------------------------------------------
+@mixin fz($size, $height: false, $weight: false) {
+
+    font-size: #{$size}px;
+    @if $weight { font-weight: $weight; }
+    @if $height { line-height: $height / $size; }
+
+}
+@mixin fzs($size, $height: false, $weight: false) {
+
+    @include media(sm) {
+        $size: $size/2;
+        $height: $height/2;
+        font-size: #{$size}px;
+        @if $weight { font-weight: $weight; }
+        @if $height { line-height: $height / $size; }
+    }
+}
+
+
+// ====================================================================
+// 関数名: opacity-rollover
+// --------------------------------------------------------------------
+// 概要: マウスオンすると透明度を変化させる
+// 引数: 
+//   $opacityValue: 透明度、デフォルトで".7"が指定
+// 使用例: @include opacity-rollover(.5);　※透明度50%の場合
+// 備考: 
+// ====================================================================
+@mixin opacity-rollover($opacityValue: .7) {
+	-moz-transition: opacity 0.12s linear;
+	-webkit-transition: opacity 0.12s linear;
+	transition: opacity 0.12s linear;
+	&:hover{
+		@include opacity($opacityValue);
+	}
+}
+
+
+
+//box-sizing
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model; // Safari <= 5
+    -moz-box-sizing: $box-model; // Firefox <= 19
+    box-sizing: $box-model;
+}
+
+
+//border-radius
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+// Single side border-radius
+
+@mixin border-top-radius($radius) {
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+    background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    background-clip: padding-box;
+}
+
+
+
+// ====================================================================
+// 関数名: linkIcon
+// --------------------------------------------------------------------
+// 概要: スマホサイトでよく見る、リストの矢印
+// 引数: 
+//   $color:        矢印のカラー
+// 使用例: @include linkIcon(#fff)
+// 引用元: http://book.scss.jp/code/c5/04.html
+// 備考: $setPrefixと合わせて使用
+// ====================================================================
+@mixin linkIcon($color: #333){
+	$setPrefix: -webkit-, -moz-, -o-, null;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		width: 10px;
+		height: 10px;
+		margin-top: -7px;
+		border-top: 3px solid $color;
+		border-right: 3px solid $color;
+		@each $prefix in $setPrefix {
+			#{$prefix}transform: rotate(45deg);
+		}
+	}
+}
+
+
+// ====================================================================
+// 関数名: yoko, tate
+// --------------------------------------------------------------------
+// 概要: デバイスの縦横判定
+// 引数: なし
+// 使用例: @include tate { width: 100%; },@include yoko { width: 25%; }
+// 引用元: http://book.scss.jp/code/c5/04.html
+// 備考: 
+// ====================================================================
+//@mixin yoko {
+//	@media all and (orientation:landscape) {
+//		@content;
+//	}
+//}
+//@mixin tate {
+//	@media all and (orientation:portrait) {
+//		@content;
+//	}
+//}
+
+
+// ====================================================================
+// 関数名: media
+// --------------------------------------------------------------------
+// 概要: ブレイクポイント毎のメディアクエリ
+
+// ====================================================================
+@mixin media($media-width) {
+// ブレイクポイントを設定（固定値）
+
+	@if $media-width == md {
+        @media only screen and (min-width: $sm-max + 1) {
+			@content;
+		}
+	}
+	@else if $media-width == sm {
+        @media only screen and (max-width: $sm-max) {
+			@content;
+		}
+	}
+	@else if $media-width == xs {
+        @media only screen and (max-width: $xs-max) {
+			@content;
+		}
+	}
+	@else {
+		@media only screen and (min-width: $media-width) {
+			@content;
+		}
+	}
+}
+

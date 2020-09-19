@@ -1,0 +1,171 @@
+@charset "UTF-8";
+/* btn
+=========================================== */
+
+.button {
+  &-right {
+    &:after {
+      content: "\f105";
+      font-family: FontAwesome;
+      margin-left: 0.5em;
+    }
+  }
+
+  &-left {
+    &:before {
+      content: "\f105";
+      font-family: FontAwesome;
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.button__wrap{
+  text-align: center;
+  margin: 2em 0 0;
+}
+.button {
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.4s;
+  background-color: $color_primary;
+  font-weight: bold;
+  color: #FFF;
+  padding: .5em 1em ;
+
+
+
+
+  &:hover {
+
+  }
+
+  &.button--default {
+    background: #fff;
+    //background: linear-gradient(to top, #cecece 30%, #ffffff 100%);
+    border-color: $darkgray;
+    //text-shadow: 0px -1px 0px rgba(000, 000, 000, 0.1), 0px 1px 0px rgba(255, 255, 255, 1);
+    color: $darkgray;
+
+    &:hover {
+      background: #f2f2f2;
+    }
+  }
+
+  &.button--primary {
+    background: $color_primary;
+    color: $color_white;
+
+    &:hover {
+      color: white;
+      background: lighten($color_primary, 20);
+    }
+  }
+
+  &.button--secondary {
+    background: $color_secondary;
+    color: white;
+
+    &:hover {
+      color: white;
+      background: lighten($color_secondary, 20);
+    }
+  }
+
+  &.button--accent {
+    background: $color_accent;
+    color: white;
+    border: none;
+    box-shadow: 0 3px 6px rgba(#000, 0.16);
+
+    &:hover {
+      color: white;
+      background: lighten($color_accent, 20);
+    }
+  }
+
+  &.button--outline {
+    background: transparent;
+    border: 2px solid $color_primary;
+
+    &:hover {
+      border-color: $color_secondary;
+    }
+  }
+
+  &.button--white {
+    color: $color_primary;
+    background-color: #fff;
+    border-color: #fff;
+
+    &:hover {
+      color: #fff;
+      background-color: $color_primary;
+    }
+  }
+
+  &.button--block {
+    width: 100%;
+    max-width: inherit;
+  }
+
+  &.button--more {
+    background: #000;
+    border: 0;
+    border-color: $darkgray;
+    color: $color_white;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+    position: relative;
+    @include fontsize(18);
+    font-weight: bold;
+    height: 60px;
+    max-width: 340px;
+    width: 340px;
+
+    @include media(sm) {
+      @include fontsize(15.5);
+      width: 100%;
+      max-width: 240px;
+    }
+
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 20px 20px;
+      border-color: transparent transparent #eed706 transparent;
+      transform: 0;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      @include media(sm) {
+        border-width: 0 0 14px 14px;
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
+
+      &:after {
+        right: 0;
+      }
+    }
+  }
+
+  &.button--small {
+    @include fontsize(14);
+    height: 40px;
+  }
+
+  &.button--large {
+    @include fontsize(18);
+    border-radius: $btnBorderRadius * 2;
+    height: 72px;
+  }
+
+  &.button--nowide {
+    min-width: inherit;
+  }
+}

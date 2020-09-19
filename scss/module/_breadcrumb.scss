@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* background
+=========================================== */
+
+.bread {
+
+    display: none;
+
+    @include media(md) {
+        background: $gray;
+        padding: .5em;
+        margin-bottom: 3.5em;
+
+    }
+    ul {
+        background: rgba(#fff, .8);
+        border-radius: 3px;
+        display: inline-block;
+        padding: .2em 1em;
+        li {
+            @include fontsize(14);
+
+            display: inline-block;
+            &:after {
+                margin-left: 5px;
+                content: ">";
+            }
+            &:last-child {
+                &:after {
+                    content: "";
+                }
+            }
+        }
+    }
+}

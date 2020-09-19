@@ -1,0 +1,15 @@
+@charset "UTF-8";
+//======================================================
+//privacy
+//======================================================//
+.dl-privacy {
+    margin-top: 1em;
+    
+	dt {
+		margin-bottom: .5em;
+        @include fontsize($baseFontSize*1.05);
+	}
+	dd {
+		margin-bottom: 1em;
+	}
+}

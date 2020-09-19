@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+/* font
+=========================================== */
+//size//
+.text {
+	&-large {
+		@include fontsize($baseFontSize*1.25);
+        
+	}
+	&-larger {
+		@include fontsize($baseFontSize*1.5);
+	}
+	&-xlarge {
+		@include fontsize($baseFontSize*1.75);
+	}
+	&-small {
+		@include fontsize($baseFontSize*.9);
+	}
+	&-smaller {
+		@include fontsize($baseFontSize*.8);
+	}
+	&-xsmall {
+		@include fontsize($baseFontSize*.7);
+	}
+}
+
+//color//
+.text {
+	&-primary {
+		color: $color_primary;
+	}
+	&-secondary {
+		color: $color_secondary;
+	}
+	&-red {
+		color: $color_red;
+	}
+	&-blue {
+		color: $color_blue;
+	}
+	&-yellow {
+		color: $yellow;
+	}
+	&-green {
+		color: $green;
+	}
+	&-white {
+		color: white;
+	}
+	&-black {
+		color: $color_black;
+	}
+	&-gray {
+		color: $gray;
+	}
+    &-disabled {
+        color: #ccc;
+    }
+}
+
+//weight//
+.text {
+	&-bold {
+		font-weight: bold;
+	}
+	&-normal {
+		font-weight: normal;
+	}
+	&-100 {
+		font-weight: 100;
+	}
+}
+
+//style//
+.text {
+	&-underline {
+		text-decoration: underline;
+	}
+	&-italic {
+		font-style: italic;
+	}
+	&-marker {
+		background: linear-gradient(transparent 0%, #ffff66 0%); //太いの
+	}
+	&-marker-thin {
+		background: linear-gradient(transparent 60%, #ffff66 60%);
+		//細いの
+	}
+}
+
+//font-family//
+.mincho {
+	font-family: $mincho;
+}
+
+.gothic {
+    font-family: $baseFontFamily;
+}
+
+.en {
+	font-family: $english;
+}
+
+.lead {
+    text-align: center;
+    @include fontsize(24);
+    font-weight: bold;
+    margin-bottom:.5em !important;
+    color:$color_primary;
+    // font-family: $mincho;
+    @include media(xs){
+        @include fontsize(16);
+    }
+}
+
+
+
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+
+.text-left{
+    text-align: left;
+}
+
+
+.ballon {
+    width: 100%;
+    max-width: $contentWidth_pc;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+
+    .ballon-title {
+        position: relative;
+        padding: 16px 16px;
+        border-radius: 4px;
+        background-color: $color_primary;
+        color: #fff;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 10%;
+            height: 0;
+            width: 0;
+            border: 8px solid transparent;
+            border-top: 8px solid $color_primary;
+            border-right: 8px solid $color_primary;
+        }
+    }
+}

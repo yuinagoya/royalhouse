@@ -1,0 +1,26 @@
+@charset "UTF-8";
+//======================================================
+//sitemap
+//======================================================//
+.list-sitemap {
+	&-title {
+		border-bottom: 3px double $gray;
+		padding-bottom: .5em;
+	}
+	ul {
+		margin:0 auto;
+        padding: 1%;
+		> li {
+			margin: 4px 0;
+            font-weight: bold;
+			ul {
+				&.children {
+					margin: 0.5em 0 1em 20px;
+                    li{
+                        font-weight: normal;
+                    }
+				}
+			}
+		}
+	}
+}

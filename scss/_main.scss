@@ -1,0 +1,100 @@
+//グーグルフォント
+//@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
+//@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+//@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+//日本語フォント
+//メイリオ
+$basefontA: "メイリオ", "Meiryo", "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro",
+  "HGS明朝E", "ＭＳ Ｐ明朝", serif, verdana, "ヒラギノ角ゴ Pro W3",
+  "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+
+//游ゴシック
+$basefontB: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro",
+  "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic",
+  sans-serif;
+
+//Noto sans
+$basefontC: "Noto Sans JP", sans-serif;
+
+//ヒラギノ
+$basefontD: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
+  "MS Pゴシック", "MS PGothic", sans-serif;
+
+//ヒラギノ明朝
+$basefontE: "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho",
+  serif;
+
+//游明朝
+$basefontF: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro",
+  "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+
+//Noto Serif JP
+$basefontF: "Noto Serif JP", serif;
+
+//その他のフォント
+$mincho: "Noto Serif JP", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝",
+  "MS PMincho", serif;
+$gothic: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
+  "MS Pゴシック", "MS PGothic", sans-serif;
+$english: "Roboto", sans-serif;
+$century: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+//フォント設定はここから
+$baseFontFamily: $basefontC; //フォントファミリー
+$baseLineHeight: 1.75; //ラインハイト
+$baseFontSize: 18; //ベース文字サイズ
+$baseLetterSpacing: 0; //レタースペーシング
+
+// Indivisual
+// -------------------------
+$headerHeight: 82px; //PCのヘッダー高さ
+$headerHeightTAB: 65px; //タブレットのヘッダー高さ
+$headerHeightSP: 65px; //スマホのヘッダー高さ
+
+// Indivisual
+// -------------------------
+//$contentWidth_pc: 108rem;
+$contentWidth_pc: 1120px;
+$contentWidth_tab: 76.8rem;
+$contentWidth_sp: 480px;
+$maincontentWidth_pc: 835px;
+$sidebarWidth_pc: 265px;
+$space: 2rem;
+
+$border-radius-base: 10px; //角丸
+
+// ボタン
+// -------------------------
+$btnBorderRadius: 30px; //ボタンの角丸（設定変える場合は個別にpx指定）
+
+// Grid
+
+$xs-max: 420px !default; // Set xs breakpoint's max width
+$sm-max: 768px !default; // Set sm breakpoint's max width
+$md-max: 992px !default; // Set md breakpoint's max width
+$lg-max: 1200px !default; // Set lg breakpoint's max width
+
+
+$content-well-max-width: "none" !default; // Set the max-width of the content well
+
+$sm-start: ($xs-max + 1); // Generate sm breakpoint's min width
+$md-start: ($sm-max + 1); // Generate md breakpoint's min width
+$lg-start: ($md-max + 1); // Generate lg breakpoint's min width
+$xl-start: ($lg-max + 1); // Generate xl breakpoint's min width
+
+// Breakpoints
+// Create breakpoint range statements to be used in media queries
+$breakpoint-xs-only: "only screen and (max-width: #{$xs-max})"; // 0 -> xs-max range
+$breakpoint-sm-up: "only screen and (min-width: #{$sm-start})"; // sm-start -> up range
+$breakpoint-sm-only: "only screen and (min-width: #{$sm-start}) and (max-width: #{$sm-max})"; // sm-start -> sm-max range
+$breakpoint-md-up: "only screen and (min-width: #{$md-start})"; // md-start -> up range
+$breakpoint-md-only: "only screen and (min-width: #{$md-start}) and (max-width: #{$md-max})"; // md-start -> md-max range
+$breakpoint-lg-up: "only screen and (min-width: #{$lg-start})"; // lg-start -> up range
+$breakpoint-lg-only: "only screen and (min-width: #{$lg-start}) and (max-width: #{$lg-max})"; // lg-start -> lg-max range
+$breakpoint-xl-up: "only screen and (min-width: #{$xl-start})"; // xl-start -> up range
+
+$breakpoints-all: ($breakpoint-xs-only, $breakpoint-sm-up, $breakpoint-sm-only, $breakpoint-md-up, $breakpoint-md-only, $breakpoint-lg-up, $breakpoint-lg-only, $breakpoint-xl-up);
+$breakpoint-ups: ($breakpoint-sm-up, $breakpoint-md-up, $breakpoint-lg-up, $breakpoint-xl-up);
+$breakpoint-all-prefixes: ("xs", "xs-only", "sm", "sm-only", "md", "md-only", "lg", "lg-only", "xl");
+$breakpoint-up-prefixes: ("xs", "sm", "md", "lg", "xl");

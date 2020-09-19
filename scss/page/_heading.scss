@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+
+
+//タイトル
+
+.l-main{
+
+
+  //h1
+  h1 {
+  }
+
+
+  h2 {
+    text-align: center;
+    margin:0 auto 1.5em;
+    @include fontsize(22);
+    line-height: 1.4;
+    color: #000000;
+    padding:30px 10px;
+    position: relative;
+    font-weight: bold;
+    @include media(sm) {
+      @include fontsize(18);
+    }
+    &:before,&:after{
+      content: "";
+      background-position: center center ;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 115px;
+      height: 52px;
+      display: block;
+      position: absolute;
+    }
+    &:before{
+      background-image:url(../images/park/park_h2_left.svg) ;
+      left: 0;
+      top: 0;
+    }
+    &:after{
+      background-image:url(../images/park/park_h2_right.svg) ;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  h3 {
+      text-align: left;
+      margin-bottom: 1em;
+      @include fontsize(19);
+      color:#000;
+      font-weight: bold;
+      @include media(sm) {
+        @include fontsize(16);
+      }
+
+      &:before{
+        content: "";
+        display: inline-block;
+        width: 1em;
+        height: 5px;
+        border-radius: 10px;
+        background-color: #F90909;
+        margin-right: .3em;
+        vertical-align: middle;
+      }
+  }
+
+
+}
