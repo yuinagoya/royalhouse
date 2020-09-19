@@ -1,6 +1,14 @@
 @charset "UTF-8";
-
-
+.article__contents{
+  .layout__date{
+    padding: 2em 0 0;
+    .layout__date__image{
+      @include media(sm) {
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+}
 
 
 

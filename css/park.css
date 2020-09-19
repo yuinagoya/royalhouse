@@ -347,6 +347,12 @@ img {
     vertical-align: middle; }
 
 /*@import "page/form";*/
+.article__contents .layout__date {
+  padding: 2em 0 0; }
+  @media only screen and (max-width: 768px) {
+    .article__contents .layout__date .layout__date__image {
+      margin-bottom: 1.5em; } }
+
 @media only screen and (min-width: 769px) {
   .hide-md {
     display: none; } }
