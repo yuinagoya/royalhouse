@@ -119,6 +119,9 @@ img {
   .l-article .article__section03 {
     -webkit-animation: float ease-out .7s .6s;
     animation: float ease-out .7s .6s; }
+  .l-article .menu__section {
+    -webkit-animation: float ease-out .7s .15s;
+    animation: float ease-out .7s .15s; }
 
 @media only screen and (max-width: 768px) {
   .movie {
@@ -282,9 +285,30 @@ img {
 
 /*@import "module/dl";
 @import "module/font";
-@import "module/list";
-@import "module/table";
-@import "module/space";
+@import "module/list";*/
+table {
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.table-default {
+  margin-bottom: 3rem;
+  width: 100%; }
+  .table-default th {
+    border-bottom: 4px solid #9BC1AF;
+    padding: 15px;
+    color: #000;
+    vertical-align: middle;
+    font-weight: bold;
+    text-align: center; }
+  .table-default td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 4px solid #ECEFED;
+    vertical-align: middle; }
+
+/*@import "module/space";
 @import "module/background";
 @import "module/box";
 @import "module/faq";
@@ -362,6 +386,27 @@ img {
   .article__contents .layout__date .layout__date__image {
     margin-bottom: 1.5em; }
 
+.menu__list a {
+  display: block;
+  text-decoration: none; }
+  .menu__list a:hover img {
+    opacity: 0.7; }
+  .menu__list a:hover .menu__list__caption {
+    color: #1D945C; }
+
+.menu__list .menu__list__caption {
+  margin: .5em 0 2em;
+  line-height: 1.5;
+  border-left: 4px solid #1D945C;
+  padding: .3em 0 .3em .5em;
+  color: #15181f;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+  @media only screen and (max-width: 768px) {
+    .menu__list .menu__list__caption {
+      margin: 1em 0 2em; } }
+
 .features__block .col-12 {
   margin-bottom: 2em; }
 
@@ -374,18 +419,6 @@ img {
   @media only screen and (max-width: 420px) {
     .color__list .color__list__caption {
       text-align: center; } }
-
-.productInfo__table {
-  border-collapse: collapse;
-  width: 100%; }
-  .productInfo__table th, .productInfo__table td {
-    border: 2px solid #000;
-    padding: .5em; }
-  .productInfo__table th {
-    text-align: center;
-    width: 30%; }
-  .productInfo__table td {
-    padding-left: 1em; }
 
 @media only screen and (min-width: 769px) {
   .hide-md {
