@@ -99,6 +99,7 @@ img {
 .l-article {
   font-size: 14px;
   font-size: 1.4rem;
+  background: #fff;
 }
 .l-article .article__title {
   text-align: center;
