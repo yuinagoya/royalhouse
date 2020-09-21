@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.bnr_lifeblock_vr {
+  display: block;
+  background: #fff;
+  box-shadow: 0 0 3px #ccc;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+
+  .row {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button {
+    display: block;
+    text-align: center;
+    background: #fff;
+    border: 1px solid $color_primary;
+    color: $color_primary;
+  }
+
+  img {
+    @include media(sm){
+      max-width: 160px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &:hover {
+      box-shadow: 0 0 4px #aaa;
+      color: $color_primary;
+
+    .button {
+      color: #fff;
+      background: $color_primary;
+    }
+  }
+}
