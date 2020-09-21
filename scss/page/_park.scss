@@ -37,6 +37,42 @@
     }
   }
 }
+.listbtn {
+  display: inline-block;
+  border: 1px solid;
+  position: relative;
+  background: #fff;
+  color:#15181f;
+  border:2px solid #15181f;
+  padding:1.5rem 5.5rem 1.5rem 1.8rem;
+  transition: all .3s;
+
+  &:after{
+    content:"";
+    position:absolute;
+    display: block;
+    transition: all .3s;
+    width: 7px;
+    height: 18px;
+    top:50%;
+    right: 2.5rem;
+    box-shadow:2px -2px 0 #fff;
+    border-top: solid 2px #15181f;
+    border-right: solid 2px #15181f;
+    transform: translateY(-50%) rotate(45deg) skewX(-45deg);;
+  }
+
+  &:hover {
+    color: #1D945C;
+    border:2px solid #1D945C;
+    &:after {
+      right:5px;
+      height: 40px;
+      border-top: solid 2px #1D945C;
+      border-right: solid 2px #1D945C;
+    }
+  }
+}
 
 
 //breakpointの書き方mixin
