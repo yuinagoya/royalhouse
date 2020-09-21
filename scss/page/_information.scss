@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+.post__list {
+  li {
+    a {
+      display: block;
+      text-decoration: none;
+      color: $color_text;
+      transition: all .4s;
+
+      &:hover {
+        color: $color_primary;
+      }
+    }
+
+    article {
+      padding: 15px 0;
+      line-height: 1.55;
+
+      .day {
+        letter-spacing: 0;
+        font-size: 94%;
+        color: darken($color_primary, 10%);
+        font-weight: bold;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    &+li {
+      border-top: 1px solid rgba($color_text, .2);
+    }
+  }
+}
+
+.information__list {
+  padding: 0 10px;
+
+  li {
+    padding-right: 0;
+    padding-left: 0;
+
+    a {
+      display: block;
+      text-decoration: none;
+      padding: .8em .5em .8em 2em;
+      position: relative;
+      line-height: 1.5;
+      text-decoration: none;
+      color: $color_text;
+border-radius:4px;
+      @include media(sm) {
+        padding: .6em .5em .6em 1.4em;
+                @include fontsize(13);
+
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 1.1em;
+        width: 10px;
+        height: 10px;
+        background: rgba($color_lightblue,.6);
+        border-radius: 50%;
+        @include media(sm) {
+                  width: 7px;
+        height: 7px;
+        left: 3px;
+        }
+      }
+
+      &:hover {
+        background: rgba($color_lightblue,.3);
+      }
+    }
+  }
+}
+
+//======================================================
+//ページナビ
+//======================================================//
+// .pagenavi {
+//   text-align: center;
+//   font-size: 0;
+//   width: 100%;
+//   margin-top: 20px;
+//   font-family: $english;
+//   .pages {
+//     display: block;
+//     text-align: center;
+//     margin-bottom: 1.5em;
+//     @include fontsize(14);
+//   }
+//   a, span {
+//     transition: all .3s;
+//     display: inline-block;
+//     text-decoration: none;
+//     padding: .1em .5em;
+//     margin: .1em 4px;
+//     color: $color_text;
+//     @include fontsize(16);
+//     border-radius: 50%;
+//     min-width: 30px;
+//     &.previouspostslink, &.nextpostslink, &.page {}
+//     &.previouspostslink, &.nextpostslink {
+//       color: $color_primary;
+//       font-weight: bold;
+//       border: none;
+//     }
+//     &.previouspostslink {
+//       margin-right: 1em;
+//     }
+//     &.nextpostslink {
+//       margin-left: 1em;
+//     }
+//     &.page {
+//       letter-spacing: 0;
+//       background: #FFF;
+//       +a.page {
+//         border-left: 0;
+//       }
+//     }
+//   }
+//   .current {
+//     text-decoration: none;
+//     background-color: $color_primary;
+//     color: #fff;
+//     +a.page {
+//       border-left: 0;
+//     }
+//   }
+//   a:hover {
+//     background: $color_secondary;
+//   }
+// }
