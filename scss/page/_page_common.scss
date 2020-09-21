@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.article__icon {
+  position: relative;
+  -webkit-animation: float ease-out 0.8s;
+  animation: float ease-out 0.8s;
+
+  img {
+    position: absolute;
+    top: -130px;
+    left: -20px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 20px;
+
+    // max-width: 180px;
+    @include media(sm) {
+      top: -55px;
+      max-width: 140px;
+    }
+  }
+}
