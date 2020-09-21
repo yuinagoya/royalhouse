@@ -1,0 +1,137 @@
+@charset "UTF-8";
+.royal_logo{
+  display: inline-block;
+  background: #eee;
+  padding:10px;
+}
+.video__contents {
+  .link_video {
+    // background: orange;
+    display: block;
+    position: relative;
+    transition: all .4s;
+    padding: 0;
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      transition: all .4s;
+      z-index: 2;
+      opacity: .7;
+    }
+
+    &:before {
+      width: 46px;
+      height: 46px;
+      background: $color_primary;
+      border-radius: 50%;
+    }
+
+    &:after {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 0 8px 14px;
+      border-color: transparent transparent transparent #fff;
+      margin-left: 3px;
+    }
+
+    img {
+      position: relative;
+      z-index: 1;
+      border: 3px solid $color_primary;
+    }
+
+    &:hover {
+      &:before, &:after {
+        transform: translate(-50%, -50%) scale(1.1, 1.1);
+        opacity: 1;
+      }
+    }
+  }
+
+  .video__ttl {
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 19px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 3px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba($color_primary, .6);
+      top: .6em;
+    }
+  }
+}
+
+// bootstrap系の上書き
+.modal-movie {
+  max-width: 750px;
+
+  @include media(sm) {
+    padding: 0 10px;
+  }
+
+  .movie {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
+
+.closebtn {
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  font-size: 40px;
+  color: #fff;
+  background: none;
+
+  @include media(sm) {
+    right: -5px;
+  }
+}
+
+//breakpointの書き方mixin
+//--------------------------------------------
+//769px以上の場合　PCサイズ MD
+//@media only screen and (min-width: 769px) {
+//    . }
+//--------------------------------------------
+@include media(md) {
+  //    ここにscssを書く
+}
+
+//--------------------------------------------
+//768px以下の場合　タブレットサイズ SM
+//@media only screen and (max-width: 768px) {
+//     }
+//--------------------------------------------
+@include media(sm) {
+  //    ここにscssを書く
+}
+
+//--------------------------------------------
+//420px以下の場合　スマホサイズ XS
+//@media only screen and (max-width: 420px) {
+//   }
+//--------------------------------------------
+@include media(xs) {
+  //    ここにscssを書く
+}
