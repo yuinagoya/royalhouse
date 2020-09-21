@@ -3,13 +3,40 @@
   .layout__date{
     padding: 2em 0 0;
     .layout__date__image{
-      @include media(sm) {
-        margin-bottom: 1.5em;
-      }
+      margin-bottom: 1.5em;
     }
   }
 }
-
+.menu__section{
+  
+}
+.menu__list{
+  a{
+    display: block;
+    text-decoration: none;
+    &:hover{
+      img{
+        opacity: 0.7;
+      }
+      .menu__list__caption{
+        color: $color_primary;
+      }
+    }
+  }
+  .menu__list__image{
+  }
+  .menu__list__caption{
+    margin: .5em 0 2em;
+    line-height: 1.5;
+    border-left: 4px solid $color_primary;
+    padding: .3em 0 .3em .5em;
+    color: $color_black;
+    transition: 0.3s ease-in-out;
+    @include media(sm) {
+      margin: 1em 0 2em;
+    }
+  }
+}
 
 
 //breakpointの書き方mixin

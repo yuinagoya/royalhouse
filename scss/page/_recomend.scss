@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.features__block{
+  .col-12{
+    margin-bottom: 2em;
+  }
+  .col-md-3{
+    .features__title{
+      &:before{
+        content: none;
+      }
+    }
+  }
+}
+.color__list{
+  .color__list__caption{
+    line-height: 1.2;
+    margin-top: .2em;
+    @include media(xs) {
+      text-align: center;
+    }
+  }
+}
+.productInfo__table{
+}
+
+
+//breakpointの書き方mixin
+//--------------------------------------------
+//769px以上の場合　PCサイズ MD
+//@media only screen and (min-width: 769px) {
+//    . }
+//--------------------------------------------
+@include media(md) {
+    //    ここにscssを書く
+}
+
+//--------------------------------------------
+//768px以下の場合　タブレットサイズ SM
+//@media only screen and (max-width: 768px) {
+//     }
+//--------------------------------------------
+@include media(sm) {
+    //    ここにscssを書く
+}
+
+//--------------------------------------------
+//420px以下の場合　スマホサイズ XS
+//@media only screen and (max-width: 420px) {
+//   }
+//--------------------------------------------
+@include media(xs) {
+    //    ここにscssを書く
+}

@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 ///*グリッドシステムは下記を採用
 ///*http://sassflexboxgrid.com/
@@ -11,17 +11,16 @@
 
 @import "setting/mixin";
 
-
 @import "layout/common";
 
 
 //モジュール
 @import "module/btn";
-/*@import "module/dl";
+/*@import "module/dl";*/
 @import "module/font";
 @import "module/list";
 @import "module/table";
-@import "module/space";
+/*@import "module/space";
 @import "module/background";
 @import "module/box";
 @import "module/faq";
@@ -42,12 +41,15 @@
 //@import "page/slug";
 @import "page/page_common";
 @import "page/park";
+
 @import "page/lifeblock";
 @import "page/sss";
 @import "page/art";
 @import "page/mailformpro";//フォーム用CSS
 @import "page/form";
 @import "page/information";
-
+@import "page/recomend";
 
 @import "page/custom";
+
+@import "page/16";
