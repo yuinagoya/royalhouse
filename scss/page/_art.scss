@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+// 一覧部分
+#modal-container {
+  figure {
+    a {
+      display: block;
+      overflow: hidden;
+      border: 8px inset $color_secondary;
+      display: block;
+
+      img {
+        display: block;
+        transition: all .5s;
+        box-shadow: 0px 0px 10px 5px #000 inset;
+      }
+
+      &:hover {
+
+        // border: 3px solid rgba(#6f9a86 ,.4);
+        img {
+          transform: scale(1.1, 1.1);
+        }
+      }
+    }
+
+    figcaption {
+      text-align: center;
+      margin: 5px auto 40px;
+      font-size: 110%;
+    }
+  }
+}
+
+// スライドショー部分
+.carousel-item{
+  text-align: center;
+}
+.modal_slideshow {
+  .close {
+    font-size: 30px;
+    color: #fff;
+    opacity: 1;
+  }
+
+  .modal-content {
+    background: none;
+    border: none;
+    margin-bottom: 80px;
+
+    .modal-header, .modal-footer {
+      background: none;
+      border: none;
+    }
+
+    .carousel-indicators {
+      top: 100%;
+      padding: 5px 0;
+      margin: 0;
+      background-color: rgba(0, 0, 0, 0.1);
+
+      li {
+        width: 100px;
+        height: auto;
+        text-indent: unset;
+        background-color: transparent;
+        opacity: 1;
+
+        &.active {
+          opacity: 1;
+
+          img {
+            border: 3px solid $color_primary;
+          }
+        }
+
+        &::before, &::after {
+          width: 0;
+          height: 0;
+        }
+
+        img {
+          border: 3px solid rgba($color_text,.8);
+          background: $color_text;
+        }
+      }
+    }
+  }
+}
+
+.modal-backdrop.show {
+  opacity: .8;
+}
