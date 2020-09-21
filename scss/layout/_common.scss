@@ -156,7 +156,7 @@ img {
   }
 }
 .inview{
-  opacity: 0;
+  //opacity: 0;
   transform: translate(0, 20px);
   transition: all .9s ease;
   &.fadeIn{
