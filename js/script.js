@@ -47,3 +47,15 @@ $(function () {
         window.scrollTo(0, scrollpos);
     });
 });
+
+
+//スクロール アニメーション
+$(function() {
+  $('.article__section , .menu__list .col-12').addClass('inview');
+  $('.inview').on('inview', function (event, isInView) {
+    if (isInView) {
+      $(this).addClass('fadeIn');
+    } 
+  });
+  
+});
