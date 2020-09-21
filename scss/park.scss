@@ -36,12 +36,18 @@
 
 //下層ページ
 @import "page/heading";//読み込むスタイルをかえて　a or b or c
-/*@import "page/form";*/
 
 
 //追加した下層
 //@import "page/slug";
+@import "page/page_common";
 @import "page/park";
+@import "page/lifeblock";
+@import "page/sss";
+@import "page/art";
+@import "page/mailformpro";//フォーム用CSS
+@import "page/form";
+@import "page/information";
 
 
 @import "page/custom";
