@@ -354,9 +354,291 @@ img {
   min-width: inherit;
 }
 
-/*@import "module/dl";
-@import "module/font";
-@import "module/list";*/
+/*@import "module/dl";*/
+/* font
+=========================================== */
+.text-large {
+  font-size: 22.5px;
+  font-size: 2.25rem;
+}
+.text-larger {
+  font-size: 27px;
+  font-size: 2.7rem;
+}
+.text-xlarge {
+  font-size: 31.5px;
+  font-size: 3.15rem;
+}
+.text-small {
+  font-size: 16.2px;
+  font-size: 1.62rem;
+}
+.text-smaller {
+  font-size: 14.4px;
+  font-size: 1.44rem;
+}
+.text-xsmall {
+  font-size: 12.6px;
+  font-size: 1.26rem;
+}
+
+.text-primary {
+  color: #1D945C;
+}
+.text-secondary {
+  color: #C3A36D;
+}
+.text-red {
+  color: #f85e3f;
+}
+.text-blue {
+  color: blue;
+}
+.text-yellow {
+  color: yellow;
+}
+.text-green {
+  color: green;
+}
+.text-white {
+  color: white;
+}
+.text-black {
+  color: #15181f;
+}
+.text-gray {
+  color: #a0a0a0;
+}
+.text-disabled {
+  color: #ccc;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+.text-normal {
+  font-weight: normal;
+}
+.text-100 {
+  font-weight: 100;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+.text-italic {
+  font-style: italic;
+}
+.text-marker {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, #ffff66));
+  background: -o-linear-gradient(transparent 0%, #ffff66 0%);
+  background: linear-gradient(transparent 0%, #ffff66 0%);
+}
+.text-marker-thin {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, #ffff66));
+  background: -o-linear-gradient(transparent 60%, #ffff66 60%);
+  background: linear-gradient(transparent 60%, #ffff66 60%);
+}
+
+.mincho {
+  font-family: "Noto Serif JP", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+
+.gothic {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.en {
+  font-family: "Roboto", sans-serif;
+}
+
+.lead {
+  text-align: center;
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 0.5em !important;
+  color: #1D945C;
+}
+@media only screen and (max-width: 420px) {
+  .lead {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.ballon {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.ballon .ballon-title {
+  position: relative;
+  padding: 16px 16px;
+  border-radius: 4px;
+  background-color: #1D945C;
+  color: #fff;
+}
+.ballon .ballon-title:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  height: 0;
+  width: 0;
+  border: 8px solid transparent;
+  border-top: 8px solid #1D945C;
+  border-right: 8px solid #1D945C;
+}
+
+/* リスト
+=========================================== */
+.list {
+  margin-bottom: 1em;
+}
+.list > li:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.list-disc li {
+  padding-left: 0.5em;
+  position: relative;
+}
+.list-disc li:before {
+  position: relative;
+  vertical-align: middle;
+  content: "・";
+  margin-right: 0.5em;
+  color: #1D945C;
+}
+
+.list-circle {
+  margin-bottom: 1em;
+}
+.list-circle li {
+  margin-bottom: 0.5em;
+  padding-left: 0.5em;
+  position: relative;
+}
+.list-circle li:before {
+  position: relative;
+  vertical-align: middle;
+  content: "";
+  font-family: FontAwesome;
+  margin-right: 1em;
+  font-size: 5.4px;
+  font-size: 0.54rem;
+  color: #1D945C;
+}
+
+.list-arrow {
+  margin-bottom: 1em;
+}
+.list-arrow li {
+  margin-bottom: 0.5em;
+  padding-left: 1em;
+  position: relative;
+}
+.list-arrow li:before {
+  position: relative;
+  vertical-align: middle;
+  content: "";
+  font-family: FontAwesome;
+  margin-right: 0.5em;
+  color: #1D945C;
+}
+
+.list-check {
+  margin-bottom: 1em;
+}
+.list-check li {
+  margin-bottom: 0.5em;
+  padding-left: 2em;
+  position: relative;
+}
+.list-check li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  font-family: FontAwesome;
+  padding: 2px 7px;
+  margin-right: 3px;
+}
+
+.list-number {
+  counter-reset: li;
+  list-style: none;
+  padding-left: 0;
+}
+.list-number > li {
+  position: relative;
+  margin-bottom: 0.5em;
+  padding-left: 2.5em;
+}
+.list-number > li:before {
+  content: counter(li) "";
+  counter-increment: li;
+  position: absolute;
+  left: 0;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+.list-number li:before {
+  background: #1D945C;
+}
+
+.list-number02 {
+  margin-bottom: 20px;
+  list-style-type: none;
+  list-style-type: decimal;
+  counter-reset: li-counter;
+  padding: 30px 20px 20px 80px;
+}
+.list-number02 > li {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  padding-left: 0.5em;
+  min-height: 3em;
+  border-bottom: 1px dotted #a0a0a0;
+}
+.list-number02 > li:before {
+  position: absolute;
+  top: 0;
+  left: -1em;
+  width: 0.2em;
+  font-size: 3em;
+  line-height: 1;
+  text-align: right;
+  content: counter(li-counter);
+  counter-increment: li-counter;
+  font-family: "Roboto", sans-serif;
+}
+.list-number02 > li:last-child {
+  margin-bottom: 0;
+}
+
 table {
   padding: 0;
   margin: 0;
@@ -391,7 +673,7 @@ table {
 @import "module/sitemap";
 @import "module/breadcrumb";
 @import "module/layout";*/
-.l-main h2 {
+.l-main h2:not(.h2__title) {
   text-align: center;
   margin: 0 auto 1.5em;
   font-size: 22px;
@@ -403,12 +685,12 @@ table {
   font-weight: bold;
 }
 @media only screen and (max-width: 768px) {
-  .l-main h2 {
+  .l-main h2:not(.h2__title) {
     font-size: 18px;
     font-size: 1.8rem;
   }
 }
-.l-main h2:before, .l-main h2:after {
+.l-main h2:not(.h2__title):before, .l-main h2:not(.h2__title):after {
   content: "";
   background-position: center center;
   background-repeat: no-repeat;
@@ -418,15 +700,34 @@ table {
   display: block;
   position: absolute;
 }
-.l-main h2:before {
+.l-main h2:not(.h2__title):before {
   background-image: url(../images/park/park_h2_left.svg);
   left: 0;
   top: 0;
 }
-.l-main h2:after {
+.l-main h2:not(.h2__title):after {
   background-image: url(../images/park/park_h2_right.svg);
   right: 0;
   bottom: 0;
+}
+.l-main .h2__title {
+  position: relative;
+  padding: 1rem 2rem calc(1rem + 10px);
+  color: #1D945C;
+  background: #E0E3D9;
+  font-weight: bold;
+  font-size: 22px;
+  font-size: 2.2rem;
+  margin: 20px;
+}
+.l-main .h2__title:before {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border: 4px solid #1D945C;
 }
 .l-main h3 {
   text-align: left;

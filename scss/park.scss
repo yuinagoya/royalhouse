@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 ///*グリッドシステムは下記を採用
 ///*http://sassflexboxgrid.com/
@@ -16,9 +16,9 @@
 
 //モジュール
 @import "module/btn";
-/*@import "module/dl";
+/*@import "module/dl";*/
 @import "module/font";
-@import "module/list";*/
+@import "module/list";
 @import "module/table";
 /*@import "module/space";
 @import "module/background";
