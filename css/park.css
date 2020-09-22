@@ -162,6 +162,10 @@ img {
   }
 }
 
+.features__block__image {
+  margin: 5px;
+}
+
 @keyframes float {
   0% {
     transform: translatey(0px);
@@ -792,6 +796,27 @@ table {
 }
 .table__vr2 td {
   letter-spacing: 0;
+}
+
+.features__block__image__smallL {
+  float: left;
+  max-width: 90px;
+}
+@media only screen and (max-width: 420px) {
+  .features__block__image__smallL {
+    float: none;
+    max-width: unset;
+  }
+}
+.features__block__image__smallR {
+  float: right;
+  max-width: 90px;
+}
+@media only screen and (max-width: 420px) {
+  .features__block__image__smallR {
+    float: none;
+    max-width: unset;
+  }
 }
 
 .article__contents .layout__date {
@@ -2164,6 +2189,10 @@ label {
   .color__list .color__list__caption {
     text-align: center;
   }
+}
+
+.recflex {
+  display: flex;
 }
 
 @media only screen and (min-width: 769px) {
