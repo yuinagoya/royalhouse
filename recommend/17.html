@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="ja">
-  <head>
+<head>
     <meta charset="utf-8">
     <title> | ROYAL HOUSE</title>
     <meta name="description" content="">
@@ -20,8 +20,9 @@
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/park.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../js/jquery.inview.min.js"></script>
     <script src="../js/script.js" defer></script>
-  </head>
+</head>
   <body class="transition-reset is-show">
     <header class="l-header">
       <div class="header__container">
@@ -199,65 +200,95 @@
               <section class="article__section article__section02">
                   <h2>カラーバリエーション</h2>
                   <div class="color__list row">
-                      <div class="col-6 col-md-3">
+                      <div class="col-6 col-md-6">
                           <div class="color__list__image text-center">
-                              <img src="../images/recommend/17/17_008.jpg" alt="ベリッシュホワイト柄">
+                              <img src="../images/recommend/17/17_008.jpg" alt="ベリッシュホワイト色、ベリッシュメイプル色、ベリッシュオーク色">
                           </div>
-                          <p class="color__list__caption">ベリッシュホワイト柄</p>
+                          <p class="color__list__caption">ベリッシュホワイト色、ベリッシュメイプル色、ベリッシュオーク色</p>
                       </div>
-                      <div class="col-6 col-md-3">
+                      <div class="col-6 col-md-6">
                           <div class="color__list__image text-center">
-                              <img src="../images/recommend/17/17_009.jpg" alt="ベリッシュメイプル色">
+                              <img src="../images/recommend/17/17_009.jpg" alt="ベリッシュチェリー色、ベリッシュウォルナット色">
                           </div>
-                          <p class="color__list__caption">ベリッシュメイプル色</p>
+                          <p class="color__list__caption">ベリッシュチェリー色、ベリッシュウォルナット色</p>
                       </div>
-                      <div class="col-6 col-md-3">
-                          <div class="color__list__image text-center">
-                              <img src="../images/recommend/17/17_010.jpg" alt="ベリッシュオーク色">
-                          </div>
-                          <p class="color__list__caption">ベリッシュオーク色</p>
-                      </div>
-                      <div class="col-6 col-md-3">
-                          <div class="color__list__image text-center">
-                              <img src="../images/recommend/17/17_011.jpg" alt="ベリッシュチェリー色">
-                          </div>
-                          <p class="color__list__caption">ベリッシュチェリー色</p>
-                      </div>
-                      <div class="col-6 col-md-3">
-                          <div class="color__list__image text-center">
-                              <img src="../images/recommend/17/17_012.jpg" alt="ベリッシュウォルナット色">
-                          </div>
-                          <p class="color__list__caption">ベリッシュウォルナット色</p>
-                      </div>
-                  </div>
-                  <h3>取っ手</h3>
-                  <div class="color__list row">
-                      <div class="col-6 col-md-3">
-                          <h4>標準取っ手</h4>
-                          <div class="color__list__image text-center">
-                              <img src="../images/recommend/17/17_013.jpg" alt="標準取っ手ラウンド型シルバー">
-                          </div>
-                          <p class="color__list__caption">ラウンド型シルバー</p>
-                      </div>
-                  </div>
-                  <div class="color__list row">
                       <div class="col-12 col-md-12">
-                          <h4>オプション取っ手</h4>
+                          <h3>取っ手</h3>
                       </div>
-                      <div class="col-6 col-md-3">
-                          <div class="color__list__image text-center">
-                              <img src="../images/recommend/17/17_014.jpg" alt="ラウンド型クローム">
+                          <div class="col-6 col-md-6">
+                              <h4>標準取っ手</h4>
+                              <div class="color__list__image text-center">
+                                  <img src="../images/recommend/17/17_010.jpg" alt="標準取っ手ラウンド型シルバー">
+                              </div>
+                              <p class="color__list__caption">ラウンド型シルバー</p>
                           </div>
-                          <p class="color__list__caption">ラウンド型クローム</p>
-                      </div>
-                      <div class="col-6 col-md-3">
-                          <div class="color__list__image text-center">
-                              <img src="../images/recommend/17/17_015.jpg" alt="ストレート小判型ステンレスヘアライン">
+                          <div class="col-12 col-md-12">
+                              <h4>オプション取っ手</h4>
+                              <div class="color__list__image text-center">
+                                  <img src="../images/recommend/17/17_011.jpg" alt="ラウンド型クローム、ストレート小判型ステンレスヘアライン">
+                              </div>
+                              <p class="color__list__caption">ラウンド型クローム、ストレート小判型ステンレスヘアライン</p>
                           </div>
-                          <p class="color__list__caption">ストレート小判型ステンレスヘアライン</p>
+                          
+                          <!--<div class="col-6 col-md-3">
+                <div class="color__list__image text-center">
+                    <img src="../images/recommend/17/17_008.jpg" alt="ベリッシュホワイト柄">
+                </div>
+                <p class="color__list__caption">ベリッシュホワイト柄</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="color__list__image text-center">
+                    <img src="../images/recommend/17/17_009.jpg" alt="ベリッシュメイプル色">
+                </div>
+                <p class="color__list__caption">ベリッシュメイプル色</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="color__list__image text-center">
+                    <img src="../images/recommend/17/17_010.jpg" alt="ベリッシュオーク色">
+                </div>
+                <p class="color__list__caption">ベリッシュオーク色</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="color__list__image text-center">
+                    <img src="../images/recommend/17/17_011.jpg" alt="ベリッシュチェリー色">
+                </div>
+                <p class="color__list__caption">ベリッシュチェリー色</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="color__list__image text-center">
+                    <img src="../images/recommend/17/17_012.jpg" alt="ベリッシュウォルナット色">
+                </div>
+                <p class="color__list__caption">ベリッシュウォルナット色</p>
+            </div>
+        </div>
+        <h3>取っ手</h3>
+        <div class="color__list row">
+            <div class="col-6 col-md-3">
+                <h4>標準取っ手</h4>
+                <div class="color__list__image text-center">
+                    <img src="../images/recommend/17/17_013.jpg" alt="標準取っ手ラウンド型シルバー">
+                </div>
+                <p class="color__list__caption">ラウンド型シルバー</p>
+            </div>
+        </div>
+        <div class="color__list row">
+            <div class="col-12 col-md-12">
+                <h4>オプション取っ手</h4>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="color__list__image text-center">
+                    <img src="../images/recommend/17/17_014.jpg" alt="ラウンド型クローム">
+                </div>
+                <p class="color__list__caption">ラウンド型クローム</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="color__list__image text-center">
+                    <img src="../images/recommend/17/17_015.jpg" alt="ストレート小判型ステンレスヘアライン">
+                </div>
+                <p class="color__list__caption">ストレート小判型ステンレスヘアライン</p>
+            </div>-->
                       </div>
-                  </div>
-              </section>
+</section>
               <section class="article__section article__section03">
                 <h2>商品情報</h2>
                 <div class="productInfo__wrap row">
