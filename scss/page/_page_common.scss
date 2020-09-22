@@ -100,5 +100,11 @@
             max-width: unset;
         }
     }
+    &__center{
+        margin-top: 8rem;
+        @include media(xs){
+            margin-top: unset;
+        }
+    }
 }
      
