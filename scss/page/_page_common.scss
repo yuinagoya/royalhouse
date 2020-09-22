@@ -80,3 +80,25 @@
     letter-spacing: 0;
   }
 }
+.features__block__image {
+    &__smallL {
+        float: left;
+        max-width: 90px;
+
+        @include media(xs) {
+            float: none;
+            max-width: unset;
+        }
+    }
+
+    &__smallR {
+        float: right;
+        max-width: 90px;
+
+        @include media(xs) {
+            float: none;
+            max-width: unset;
+        }
+    }
+}
+     
