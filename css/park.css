@@ -818,6 +818,14 @@ table {
     max-width: unset;
   }
 }
+.features__block__image__center {
+  margin-top: 8rem;
+}
+@media only screen and (max-width: 420px) {
+  .features__block__image__center {
+    margin-top: unset;
+  }
+}
 
 .article__contents .layout__date {
   padding: 2em 0 0;
@@ -850,40 +858,8 @@ table {
   }
 }
 
-.listbtn {
-  display: inline-block;
-  position: relative;
-  background: #fff;
-  color: #15181f;
-  margin-bottom: 2em;
-  width: 100%;
-  border: 2px solid #15181f;
-  padding: 1.5rem 5.5rem 1.5rem 1.8rem;
-  transition: all 0.3s;
-}
-.listbtn:after {
-  content: "";
-  position: absolute;
-  display: block;
-  transition: all 0.3s;
-  width: 7px;
-  height: 18px;
-  top: 50%;
-  right: 2.5rem;
-  box-shadow: 2px -2px 0 #fff;
-  border-top: solid 2px #15181f;
-  border-right: solid 2px #15181f;
-  transform: translateY(-50%) rotate(45deg) skewX(-45deg);
-}
-.listbtn:hover {
-  color: #1D945C;
-  border: 2px solid #1D945C;
-}
-.listbtn:hover:after {
-  right: 5px;
-  height: 40px;
-  border-top: solid 2px #1D945C;
-  border-right: solid 2px #1D945C;
+.mini-mb {
+  margin-bottom: 1.5em;
 }
 
 .bnr_lifeblock_vr {
