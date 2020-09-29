@@ -839,7 +839,7 @@ table {
   text-decoration: none;
 }
 .menu__list a:hover img {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 .menu__list a:hover .menu__list__caption {
   color: #1D945C;
@@ -856,6 +856,23 @@ table {
   .menu__list .menu__list__caption {
     margin: 1em 0 2em;
   }
+}
+.menu__list .icon_triborder {
+  position: relative;
+  display: block;
+  padding-left: 17px;
+}
+.menu__list .icon_triborder:after {
+  content: "";
+  border-top: 3px solid #1D945C;
+  border-right: 3px solid #1D945C;
+  margin-top: -11px;
+  right: 20px;
+  height: 17px;
+  width: 17px;
+  position: absolute;
+  top: 50%;
+  transform: rotate(45deg);
 }
 
 .mini-mb {
